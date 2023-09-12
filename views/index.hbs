@@ -1,0 +1,594 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>PG CET Previous Question Papers</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #d82612;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .header-shape {
+            width: 100%;
+            height: 150px;
+            position: absolute;
+            bottom: -40px;
+            left: 0;
+            z-index: -1;
+            background: #4CAF50;
+            clip-path: polygon(0% 0%, 100% 0%, 100% 85%, 0% 100%);
+        }
+
+        h1 {
+            margin: 0;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            border-radius: 5px;
+            position: relative;
+            /* Added */
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        li {
+            margin: 10px 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid #ccc;
+            padding-bottom: 10px;
+        }
+
+        .btn-download,
+        .btn-preview {
+            padding: 8px 16px;
+            background-color: #007BFF;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            text-decoration: none;
+        }
+
+        .btn-preview {
+            background-color: #28a745;
+        }
+
+        .btn-download:hover,
+        .btn-preview:hover {
+            background-color: #0056b3;
+        }
+
+        .year {
+            font-weight: bold;
+            font-size: 1.2rem;
+        }
+
+        /* Styling for left and right ads */
+        /* Removed .left-ad and .right-ad styles */
+
+        @keyframes slideIn {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
+        }
+
+        /* Apply animations to header and buttons */
+        header {
+            animation: fadeIn 1s;
+        }
+
+        .btn-download,
+        .btn-preview {
+            animation: slideIn 0.5s ease-in-out;
+        }
+
+        /* Add hover animations for buttons */
+        .btn-download:hover,
+        .btn-preview:hover {
+            transform: scale(1.05);
+        }
+
+        /* Removed .left-ad and .right-ad animations */
+
+        @keyframes walk {
+            0% {
+                left: 100px;
+                /* Start from the left */
+            }
+
+            100% {
+                left: calc(100% - 1180px);
+                /* End at the start of h1 */
+            }
+        }
+
+        /* Style for the walking character */
+        .walking-character {
+            position: absolute;
+            bottom: 20px;
+            /* Adjust the position as needed */
+            animation: walk 10s linear infinite;
+            /* Adjust duration and timing as needed */
+        }
+
+
+
+
+        /* Style for right ad */
+        .right-ad {
+            position: absolute;
+            top: 90px;
+            right: 0;
+            width: 20%;
+            /* Adjust the width as needed */
+            padding: 10px;
+        }
+
+        .left-ad {
+            position: absolute;
+            top: 90px;
+            left: 0;
+            width: 20%;
+            /* Adjust the width as needed */
+            padding: 10px;
+        }
+
+        /* Adjust the positioning and styling as needed */
+
+        /* Style for the logo */
+        .logo {
+            float: left;
+            height: 40px;
+            width: 50px;
+            top: 0;
+        }
+
+
+
+
+
+
+
+
+
+        .additional-container {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            border-radius: 5px;
+            display: flex;
+        }
+
+        .youtube-channel {
+            display: flex;
+            align-items: center;
+        }
+
+        .logo {
+            margin-right: 20px;
+        }
+
+        .logo img {
+            max-width: 120px;
+            height: auto;
+            border-radius: 50%;
+            box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+        }
+
+        .channel-details {
+            flex-grow: 1;
+        }
+
+        .channel-details p {
+            margin: 10px 0;
+            font-size: 16px;
+            line-height: 1.4;
+        }
+
+        .channel-details strong {
+            color: #333;
+        }
+
+        .channel-details a {
+            text-decoration: none;
+            color: #0078e7;
+            font-weight: bold;
+        }
+
+        .channel-details a:hover {
+            text-decoration: underline;
+        }
+
+
+
+        .thank-you-message {
+            background-color: #eb0aff;
+            color: #fff;
+            text-align: center;
+            font-size: 1.5rem;
+            padding: 10px;
+            border-radius: 5px;
+            margin-top: 20px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            display: flex;
+            justify-content: center;
+        }
+    </style>
+    <style>
+        /* Footer Styles */
+        footer {
+            background-color: #000000;
+            color: #fff;
+            padding: 20px 0;
+            text-align: center;
+        }
+
+        .footer-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .footer-logo img {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            margin-right: 20px;
+        }
+
+        .footer-info h2 {
+            font-size: 1.5rem;
+            margin: 0;
+        }
+
+        .footer-info p {
+            font-size: 1rem;
+        }
+
+        .btn-subscribe {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #28a745;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+            margin-top: 10px;
+            transition: background-color 0.3s;
+        }
+
+        .btn-subscribe:hover {
+            background-color: #1e9328;
+        }
+
+        .social-icons {
+            margin-top: 20px;
+        }
+
+        .social-icons a {
+            display: inline-block;
+            margin: 0 10px;
+        }
+
+        .social-icons img {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            transition: transform 0.3s;
+        }
+
+        .social-icons img:hover {
+            transform: scale(1.2);
+        }
+    </style>
+    <style>
+        /* Styles for screens smaller than 768px (e.g., mobile devices) */
+        @media screen and (max-width: 768px) {
+            header {
+                padding: 10px;
+            }
+
+            .logo {
+                height: 30px;
+            }
+
+            .walking-character {
+                max-width: 100%;
+                height: auto;
+                margin-top: 5px;
+            }
+
+            h1 {
+                font-size: 1.2rem;
+            }
+
+            .container {
+                margin: 10px;
+                padding: 10px;
+            }
+
+            .btn-download,
+            .btn-preview {
+                padding: 6px 12px;
+            }
+
+            .year {
+                font-size: 1rem;
+            }
+        }
+    </style>
+
+
+    <style>
+    /* Styles for screens smaller than 768px (e.g., mobile devices) */
+    @media screen and (max-width: 768px) {
+        /* Show and position the left and right ads between container and footer */
+        .left-ad,
+        .right-ad {
+            display: block;
+            position: static;
+            width: 100%;
+            margin: 0;
+            padding: 10px;
+        }
+
+        /* Adjust the container width and margins */
+        .container {
+            max-width: 100%;
+            margin: 10px;
+            padding: 10px;
+        }
+
+        /* Center-align the YouTube channel section */
+        .additional-container {
+            text-align: center;
+            padding: 20px 0;
+        }
+    }
+</style>
+
+</head>
+
+<body>
+    <header>
+        <img src="logo.jpg" alt="Your Logo" class="logo">
+        <img src="walking-character.gif" alt="Walking Character" class="walking-character">
+        <h1>PG CET Previous Question Papers[MCA]</h1>
+        <div class="header-shape"></div>
+    </header>
+    
+    <!-- <div class="additional-container">
+        <h2>New Container</h2>
+        <p>This is the content of the new container.</p>
+    </div> -->
+    <div class="additional-container">
+        <!-- YouTube Channel Section -->
+        <div class="youtube-channel">
+            <div style="float: left;">
+                <a href="https://www.youtube.com/@coding.alphass" target="_blank">
+                    <img src="logo.jpg" alt="Your YouTube Channel Logo" height="120px" width="120px">
+                </a>
+            </div>
+            <div class="channel-details" style="float: left;margin-left: 20px;">
+                <p>
+                    <strong>YouTube Channel:</strong>
+                    <a href="https://www.youtube.com/@coding.alphass" target="_blank">
+                        Coding.Alphas</a>
+                </p>
+                <p>
+                    <strong>Description:</strong>
+                    On this website, you can access and download previous year question papers for PGCET. Simply click
+                    "Download" to get the question paper, or choose "Preview" for online viewing.
+                </p>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="container">
+        <ul>
+            <li>
+                <span>Question Paper </span>
+                <span class="year">2022</span>
+                <a href="/download/questionPaper/pgcet-2022.pdf" class="btn-download">Download</a>
+                <a href="/preview/questionPaper/pgcet-2022.pdf" class="btn-preview">Preview</a>
+            </li>
+            <li>
+                <span>Question Paper </span>
+                <span class="year">2021</span>
+                <a href="/download/questionPaper/pgcet-2021.pdf" class="btn-download">Download</a>
+                <a href="/preview/questionPaper/pgcet-2021.pdf" class="btn-preview">Preview</a>
+            </li>
+            <li>
+                <span>Question Paper </span>
+                <span class="year">2020</span>
+                <a href="/download/questionPaper/pgcet-2020.pdf" class="btn-download">Download</a>
+                <a href="/preview/questionPaper/pgcet-2020.pdf" class="btn-preview">Preview</a>
+            </li>
+            <li>
+                <span>Question Paper </span>
+                <span class="year">2019</span>
+                <a href="/download/questionPaper/pgcet-2019.pdf" class="btn-download">Download</a>
+                <a href="/preview/questionPaper/pgcet-2019.pdf" class="btn-preview">Preview</a>
+            </li>
+            <li>
+                <span>Question Paper </span>
+                <span class="year">2018</span>
+                <a href="/download/questionPaper/pgcet-2018.pdf" class="btn-download">Download</a>
+                <a href="/preview/questionPaper/pgcet-2018.pdf" class="btn-preview">Preview</a>
+            </li>
+            <li>
+                <span>Question Paper </span>
+                <span class="year">2017</span>
+                <a href="/download/questionPaper/pgcet-2017.pdf" class="btn-download">Download</a>
+                <a href="/preview/questionPaper/pgcet-2017.pdf" class="btn-preview">Preview</a>
+            </li>
+            <li>
+                <span>Question Paper </span>
+                <span class="year">2016</span>
+                <a href="/download/questionPaper/pgcet-2016.pdf" class="btn-download">Download</a>
+                <a href="/preview/questionPaper/pgcet-2016.pdf" class="btn-preview">Preview</a>
+            </li>
+            <li>
+                <span>Question Paper </span>
+                <span class="year">2015</span>
+                <a href="/download/questionPaper/pgcet-2015.pdf" class="btn-download">Download</a>
+                <a href="/preview/questionPaper/pgcet-2015.pdf" class="btn-preview">Preview</a>
+            </li>
+            {{!-- <li>
+                <span>Question Paper </span>
+                <span class="year">2014</span>
+                <a href="/download/questionPaper/pgcet-2014.pdf" class="btn-download">Download</a>
+                <a href="/preview/questionPaper/pgcet-2014.pdf" class="btn-preview">Preview</a>
+            </li> --}}
+            <li>
+                <span>Question Paper </span>
+                <span class="year">2013</span>
+                <a href="/download/questionPaper/pgcet-2013.pdf" class="btn-download">Download</a>
+                <a href="/preview/questionPaper/pgcet-2013.pdf" class="btn-preview">Preview</a>
+            </li>
+            <li class="thank-you-message">
+                Thank You For Using Our Website
+            </li>
+            <!-- Add more question papers as needed -->
+        </ul>
+    </div>
+
+
+    <div class="left-ad">
+        <div style="height: 300px;">
+            <script async
+                src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6344711102218924"
+                crossorigin="anonymous"></script>
+            <!-- Coding -->
+            <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-6344711102218924"
+                data-ad-slot="9002463520" data-ad-format="auto" data-full-width-responsive="true"></ins>
+            <script>
+                (adsbygoogle = window.adsbygoogle || []).push({});
+            </script>
+        </div>
+        <br>
+        <div style="height: 300px;">
+            <script async
+                src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6344711102218924"
+                crossorigin="anonymous"></script>
+            <!-- Coding -->
+            <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-6344711102218924"
+                data-ad-slot="9002463520" data-ad-format="auto" data-full-width-responsive="true"></ins>
+            <script>
+                (adsbygoogle = window.adsbygoogle || []).push({});
+            </script>
+        </div>
+        <br>
+        <div style="height: 300px;">
+            <script async
+                src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6344711102218924"
+                crossorigin="anonymous"></script>
+            <!-- Coding -->
+            <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-6344711102218924"
+                data-ad-slot="9002463520" data-ad-format="auto" data-full-width-responsive="true"></ins>
+            <script>
+                (adsbygoogle = window.adsbygoogle || []).push({});
+            </script>
+        </div>
+    </div>
+    <!-- Right Ad Container -->
+    <div class="right-ad">
+        <div style="height: 300px;">
+            <script async
+                src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6344711102218924"
+                crossorigin="anonymous"></script>
+            <!-- Coding -->
+            <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-6344711102218924"
+                data-ad-slot="9002463520" data-ad-format="auto" data-full-width-responsive="true"></ins>
+            <script>
+                (adsbygoogle = window.adsbygoogle || []).push({});
+            </script>
+        </div>
+        <br>
+        <div style="height: 300px;">
+            <script async
+                src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6344711102218924"
+                crossorigin="anonymous"></script>
+            <!-- Coding -->
+            <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-6344711102218924"
+                data-ad-slot="9002463520" data-ad-format="auto" data-full-width-responsive="true"></ins>
+            <script>
+                (adsbygoogle = window.adsbygoogle || []).push({});
+            </script>
+        </div>
+        <br>
+        <div style="height: 300px;">
+            <script async
+                src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6344711102218924"
+                crossorigin="anonymous"></script>
+            <!-- Coding -->
+            <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-6344711102218924"
+                data-ad-slot="9002463520" data-ad-format="auto" data-full-width-responsive="true"></ins>
+            <script>
+                (adsbygoogle = window.adsbygoogle || []).push({});
+            </script>
+        </div>
+    </div>
+
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-logo">
+                <img src="logo.jpg" alt="YouTube Logo">
+            </div>
+            <div class="footer-info">
+                <h2>Subscribe to My YouTube Channel</h2>
+                <p>Stay up-to-date with my latest videos, tutorials, and more. Don't miss out!</p>
+                <a href="https://www.youtube.com/@coding.alphass" target="_blank"
+                    class="btn-subscribe">Coding.Alphas</a>
+            </div>
+        </div>
+    </footer>
+
+</body>
+
+</html>
